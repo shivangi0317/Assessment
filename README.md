@@ -13,7 +13,7 @@ Downloads a compressed CSV file from a remote URL
 
 Python 3.8+ :
 Required packages (install with pip install -r requirements.txt):
-pandas, sqlalchemy, psycopg2-binary (for PostgreSQL), requests, Configuration
+pandas, sqlalchemy, requests, Configuration
 
 Database Setup:
 Create the database schema by running:
