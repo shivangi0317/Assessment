@@ -14,37 +14,41 @@ Downloads a compressed CSV file from a remote URL
 Python 3.8+ :
 Required packages (install with pip install -r requirements.txt):
 pandas, sqlalchemy, requests, numpy
+commmand: pip install pandas    ( similarly for others sqlalchemy, pymysql, requests)
 
 Database Setup:
-Create the database schema by running:
 
-bash
-psql -U your_username -d your_database -f schema.sql
+Create MySQL Database:
+sql
+CREATE DATABASE product_data;
+USE product_data;
+
 Update the database configuration in the Python script:
 
 python
 DB_CONFIG = {
-    'dialect': 'postgresql',
-    'username': 'your_username',
-    'password': 'your_password',
+    'dialect': 'mysql',
+    'driver': 'pymysql',
+    'username': 'pipeline_user',  # Replace with your credentials
+    'password': 'secure_password',
     'host': 'localhost',
-    'port': '5432',
-    'database': 'your_database'
+    'port': '3306',
+    'database': 'product_data',
+    'charset': 'utf8mb4'
 }
+CHUNKSIZE = 50000  # Rows processed per batch
 
 Environment Variables (optional):
 You can set database credentials as environment variables:
 
-bash
-export DB_USER=your_username
-export DB_PASSWORD=your_password
-export DB_NAME=your_database
+export DB_USER='pipeline_user'
+export DB_PASSWORD='secure_password'
+export DB_NAME='product_data'
 
 How to Run
 Execute the main script:
-
-bash
 python script.py
+
 
 Tasks done by script.py file:
 
