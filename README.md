@@ -11,30 +11,32 @@ Overview: This project implements a data processing pipeline that:
 
 Python 3.8+ :
     Required packages (install with pip install -r requirements.txt):  pandas, sqlalchemy, requests, numpy
-    Commmand: pip install pandas    ( similarly for others sqlalchemy, pymysql, requests)
+    Commmand: Similar command for others
+    
+    pip install pandas    
 
 Database Setup:
 
    Create MySQL Database:
 
-   CREATE DATABASE product_data;
-   USE product_data;
+       CREATE DATABASE product_data;
+       USE product_data;
 
-    Update the database configuration in the Python script:
+Update the database configuration in the Python script:
     
-    DB_CONFIG = {
-        'dialect': 'mysql',
-        'driver': 'pymysql',
-        'username': 'pipeline_user',  # Replace with your credentials
-        'password': 'secure_password',
-        'host': 'localhost',
-        'port': '3306',
-        'database': 'product_data',
-        'charset': 'utf8mb4'
-    }
-    CHUNKSIZE = 50000  # Rows processed per batch
+        DB_CONFIG = {
+            'dialect': 'mysql',
+            'driver': 'pymysql',
+            'username': 'pipeline_user',  # Replace with your credentials
+            'password': 'secure_password',
+            'host': 'localhost',
+            'port': '3306',
+            'database': 'product_data',
+            'charset': 'utf8mb4'
+        }
+        CHUNKSIZE = 50000  # Rows processed per batch
     
-    Environment Variables (optional):
+Environment Variables (optional):
     You can set database credentials as environment variables:
     
     export DB_USER='pipeline_user'
