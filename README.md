@@ -13,7 +13,7 @@ Downloads a compressed CSV file from a remote URL
 
 Python 3.8+ :
 Required packages (install with pip install -r requirements.txt):
-pandas, sqlalchemy, requests, Configuration
+pandas, sqlalchemy, requests, numpy
 
 Database Setup:
 Create the database schema by running:
