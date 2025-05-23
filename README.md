@@ -45,7 +45,8 @@ Environment Variables (optional):
 
 How to Run
 Execute the main script:
-python script.py
+   
+    python script.py
 
 
 Tasks done by script.py file:
@@ -55,7 +56,7 @@ Tasks done by script.py file:
 3. Log all operations to data_processing.log
 4. Store results in the database
 5. Data Transformations
-6. 
+
 The pipeline performs these key transformations:
 1. Type conversions (numeric, string, boolean)
 2. Null value handling
@@ -66,16 +67,16 @@ The pipeline performs these key transformations:
 Database Schema
 The processed data is stored in a products table with this structure:
 
-sql
-CREATE TABLE products (
-    sku_id BIGINT PRIMARY KEY,
-    product_id BIGINT,
-    availability VARCHAR(50),
-    venture_category2_name_en VARCHAR(255),
-    -- ... (other columns)
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+
+    CREATE TABLE products (
+        sku_id BIGINT PRIMARY KEY,
+        product_id BIGINT,
+        availability VARCHAR(50),
+        venture_category2_name_en VARCHAR(255),
+        -- ... (other columns)
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
 
 Performance Considerations: 
 1. Processes data in chunks (configurable via CHUNKSIZE)
@@ -90,10 +91,11 @@ The pipeline includes:
 3. Try-catch blocks for all major operations
 4. Validation checks
 
-After successful run, you can query the database:
+After a successful run, you can query the database:
 
-Example: sql
-SELECT sku_id, product_name, current_price 
-FROM products 
-WHERE is_free_shipping = TRUE 
-LIMIT 10;
+Example: 
+
+        SELECT sku_id, product_name, current_price 
+        FROM products 
+        WHERE is_free_shipping = TRUE 
+        LIMIT 10;
