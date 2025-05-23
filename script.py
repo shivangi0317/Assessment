@@ -75,11 +75,14 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
         df['sku_id'] = pd.to_numeric(df['sku_id'], errors='coerce').astype('Int64')
         df['product_id'] = pd.to_numeric(df['product_id'], errors='coerce').astype('Int64')
 
-        # Drop colums of img and URL (optional if they are required you can skip deleting it)
+        # Drop colums of img and URL (optional if they are required you can skip dropping it)
         df=df.drop(['product_big_img'],axis=1)
-        df=df.drop(['product_big_img'],axis=1)
-        df=df.drop(['product_big_img'],axis=1)
-        df=df.drop(['product_big_img'],axis=1)
+        df=df.drop(['deeplink'],axis=1)
+        df=df.drop(['image_url_5'],axis=1)
+        df=df.drop(['product_medium_img'],axis=1)
+        df=df.drop(['image_url_4'],axis=1)
+        df=df.drop(['seller_url'],axis=1)
+        df=df.drop(['product_small_img'],axis=1)
         
         # Drop rows with null sku_id
         initial_count = len(df)
