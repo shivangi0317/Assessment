@@ -1,31 +1,27 @@
 # Assessment
-Data Processing Pipeline - README
-Overview
-This project implements a data processing pipeline that:
 
-Downloads a compressed CSV file from a remote URL
+Overview: This project implements a data processing pipeline that:
 
-1. Performs data transformation and cleaning
-2. Stores the processed data in a SQL database
-3. Includes comprehensive error handling and logging
-4. Optimizes performance through chunked processing
+1. Downloads a compressed CSV file from a remote URL
+2. Performs data transformation and cleaning
+3. Stores the processed data in a SQL database
+4. Includes comprehensive error handling and logging
+5. Optimizes performance through chunked processing
 
 
 Python 3.8+ :
-Required packages (install with pip install -r requirements.txt):
-pandas, sqlalchemy, requests, numpy
-commmand: pip install pandas    ( similarly for others sqlalchemy, pymysql, requests)
+    Required packages (install with pip install -r requirements.txt):  pandas, sqlalchemy, requests, numpy
+    Commmand: pip install pandas    ( similarly for others sqlalchemy, pymysql, requests)
 
 Database Setup:
 
-Create MySQL Database:
-sql
-CREATE DATABASE product_data;
-USE product_data;
+   Create MySQL Database:
+
+   CREATE DATABASE product_data;
+   USE product_data;
 
 Update the database configuration in the Python script:
 
-python
 DB_CONFIG = {
     'dialect': 'mysql',
     'driver': 'pymysql',
