@@ -1,5 +1,6 @@
-
--- SQL Schema 
+# --SQL Schema
+CREATE DATABASE product_data;
+USE product_data;
 
 CREATE TABLE products (
     sku_id BIGINT PRIMARY KEY,
