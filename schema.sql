@@ -1,5 +1,6 @@
-
--- SQL Schema 
+--SQL Schema
+CREATE DATABASE product_data;
+USE product_data;
 
 CREATE TABLE products (
     sku_id BIGINT PRIMARY KEY,
@@ -35,4 +36,3 @@ CREATE INDEX idx_seller_name ON products(seller_name);
 CREATE INDEX idx_business_type ON products(business_type);
 CREATE INDEX idx_current_price ON products(current_price);
 CREATE INDEX idx_rating ON products(rating_avg_value);
-
