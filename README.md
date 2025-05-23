@@ -20,26 +20,26 @@ Database Setup:
    CREATE DATABASE product_data;
    USE product_data;
 
-Update the database configuration in the Python script:
-
-DB_CONFIG = {
-    'dialect': 'mysql',
-    'driver': 'pymysql',
-    'username': 'pipeline_user',  # Replace with your credentials
-    'password': 'secure_password',
-    'host': 'localhost',
-    'port': '3306',
-    'database': 'product_data',
-    'charset': 'utf8mb4'
-}
-CHUNKSIZE = 50000  # Rows processed per batch
-
-Environment Variables (optional):
-You can set database credentials as environment variables:
-
-export DB_USER='pipeline_user'
-export DB_PASSWORD='secure_password'
-export DB_NAME='product_data'
+    Update the database configuration in the Python script:
+    
+    DB_CONFIG = {
+        'dialect': 'mysql',
+        'driver': 'pymysql',
+        'username': 'pipeline_user',  # Replace with your credentials
+        'password': 'secure_password',
+        'host': 'localhost',
+        'port': '3306',
+        'database': 'product_data',
+        'charset': 'utf8mb4'
+    }
+    CHUNKSIZE = 50000  # Rows processed per batch
+    
+    Environment Variables (optional):
+    You can set database credentials as environment variables:
+    
+    export DB_USER='pipeline_user'
+    export DB_PASSWORD='secure_password'
+    export DB_NAME='product_data'
 
 How to Run
 Execute the main script:
